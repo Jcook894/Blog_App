@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 
 
-class PostsIndex extends Component{
+class PostsIndex extends Component {
+  componentWillMount(){
+    console.log("Call an action creator!!!");
+  }
   render() {
     return (
       <div>
