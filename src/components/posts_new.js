@@ -3,8 +3,10 @@ import { reduxForm } from 'redux-form';
 
 class PostsNew extends Component {
   render() {
+    const {fields:{title,category,content}, handleSubmit } = this.props;
+    console.log(title);
     return(
-      <form>
+      <form onSubmit={handleSubmit}>
         <h3>Create a New Post</h3>
         <div className="form-group">
           <label>Title</label>
