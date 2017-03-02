@@ -12,6 +12,9 @@ class PostsNew extends Component {
         <div className="form-group">
           <label>Title</label>
           <input type="text" className="form-control" {...title}/>
+          <div className="text-help">
+            {title.touched ? title.error : ""}
+          </div>
         </div>
 
         <div className="form-group">
@@ -33,8 +36,8 @@ class PostsNew extends Component {
 function validate(value){
   const error = {};
 
-    if(!values.title){
-      error.title = 'Enter a username';
+    if(!value.title){
+      error.title = 'Enter a blog title!';
 
     }
   return error;
