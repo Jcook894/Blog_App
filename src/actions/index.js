@@ -15,10 +15,10 @@ export function fetchPosts () {
   };
 }
 
-export default createPost(props){
+export function createPost(props){
   const request = axios.post(`${ROOT_URL}/posts${API_KEY}`, props);
 
-  return{
+  return {
     type: CREATE_POST,
     payload: request
   };
