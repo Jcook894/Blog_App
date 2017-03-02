@@ -20,11 +20,17 @@ class PostsNew extends Component {
         <div className="form-group">
           <label>Categories</label>
           <input type="text" className="form-control" {...category}/>
+          <div className="text-help">
+            {category.touched ? category.error : ""}
+          </div>
         </div>
 
         <div className="form-group">
           <label>Content</label>
           <textarea className="form-control" {...content}/>
+          <div className="text-help">
+            {content.touched ? content.error : ""}
+          </div>
         </div>
 
         <button type="submit" className="btn btn-primary">Submit</button>
@@ -33,12 +39,21 @@ class PostsNew extends Component {
   }
 }
 
+// Validation on the form inputs.
 function validate(value){
   const error = {};
 
     if(!value.title){
       error.title = 'Enter a blog title!';
 
+    }
+
+    if(!value.category){
+      error.category = 'Enter a category!';
+    }
+
+    if(!value.content){
+      error.content = 'Type in some content!';
     }
   return error;
 }
