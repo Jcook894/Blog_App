@@ -30,13 +30,24 @@ class PostsNew extends Component {
   }
 }
 
+function validate(value){
+  const error = {};
+
+    if(!values.title){
+      error.title = 'Enter a username';
+
+    }
+  return error;
+}
+
 // Connnect: first arguement is mapStateToProps, Second is mapDispatchToProps.
 
 //reduxForm: 1st is  form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps.
 
 export default reduxForm({
   form: 'PostNew',
-  fields:['title', 'category', 'content']
+  fields:['title', 'category', 'content'],
+  validate
 }, null, { createPost })(PostsNew);
 
 /// Whenever a user types something in.... record it on app state.
