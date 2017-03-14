@@ -7,14 +7,17 @@ class PostsShow extends Component {
     this.props.fetchPost(this.props.params.id);
   }
   render() {
-    if(!this.props.post){
+    const { post } = this.props;
+    if(!post){
       return <div>Loading.....</div>
     }
     console.log(this.props.post);
       return(
 
         <div>
-          Show post {this.props.params.id}
+          <h3>{post.title}</h3>
+          <h6>{post.category}</h6>
+          <p>{post.content}</p>
         </div>
       );
   }
