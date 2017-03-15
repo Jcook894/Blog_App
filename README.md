@@ -1,6 +1,6 @@
 # Blog Application.
 
-##About.
+## About.
 
 A blog application I made using React and Redux. By using Redux, I was able to make calls to an API to store data and manipulate that data using React.
 
