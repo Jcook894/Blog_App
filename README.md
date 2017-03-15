@@ -1,25 +1,14 @@
-# ReduxSimpleStarter
+# Blog Application
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+## How to run.
 
-###Getting Started###
+* To run this application, clone or unzip the file. Once downloaded, open up the terminal and run:
 
-There are two methods for getting started with this repo.
+> npm install
 
-####Familiar with Git?#####
-Checkout this repo, install dependencies, then start the gulp process with the following:
+* Once all the dependencies are downloaded, you can run a simple server courtesy of webpack dev server by running this in the terminal:
 
-```
-	> git clone git@github.com:StephenGrider/ReduxSimpleStarter.git
-	> cd ReduxSimpleStarter
-	> npm install
-	> npm start
-```
+> npm start
 
-####Not Familiar with Git?#####
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
 
-```
-	> npm install
-	> npm start
-```
+ 
