@@ -20,7 +20,7 @@ class PostsNew extends Component {
   }
 
   render() {
-    const {fields:{title,category,content}, handleSubmit } = this.props;
+    const {fields:{title, categories, content}, handleSubmit } = this.props;
 
     return(
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
@@ -33,11 +33,11 @@ class PostsNew extends Component {
           </div>
         </div>
 
-        <div className={`form-group ${category.touched && category.invalid ? "has-danger" : ''}`}>
+        <div className={`form-group ${categories.touched && categories.invalid ? "has-danger" : ''}`}>
           <label className="sub-headers">Categories</label>
-          <input type="text" className="form-control" {...category}/>
+          <input type="text" className="form-control" {...categories}/>
           <div className="text-help">
-            {category.touched ? category.error : ""}
+            {categories.touched ? categories.error : ""}
           </div>
         </div>
 
@@ -67,8 +67,8 @@ function validate(value){
 
     }
 
-    if(!value.category){
-      error.category = 'Enter a category!';
+    if(!value.categories){
+      error.categories = 'Enter a categories!';
     }
 
     if(!value.content){
@@ -83,7 +83,7 @@ function validate(value){
 
 export default reduxForm({
   form: 'PostNew',
-  fields:['title', 'category', 'content'],
+  fields:['title', 'categories', 'content'],
   validate
 }, null, { createPost })(PostsNew);
 
