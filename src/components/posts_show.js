@@ -36,9 +36,12 @@ class PostsShow extends Component {
             onClick={this.onDeleteClick.bind(this)}>
             Delete Post
           </button>
-          <h3>{post.title}</h3>
+          <h3 className="headers">{post.title}</h3>
           <h6>{post.category}</h6>
-          <p>{post.content}</p>
+          <div className="post-content">
+            <p>{post.content}</p>
+          </div>
+
         </div>
       );
   }

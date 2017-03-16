@@ -1,3 +1,16 @@
+.body{
+  background-color: grey;
+}
+
+.headers{
+  text-align: center;
+}
+
+.post-content{
+  background-color: white;
+  border-radius: 5px;
+}
+
 form a{
   margin-left: 5px;
 
