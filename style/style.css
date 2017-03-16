@@ -3,7 +3,8 @@
 }
 
 .headers{
-  text-decoration: underline;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
   text-align: center;
   color: white;
 }
