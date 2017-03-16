@@ -4,9 +4,14 @@
 
 .headers{
   text-align: center;
+  color: white;
+}
+.sub-headers{
+  color: white;
 }
 
 .post-content{
+  padding: 10px 5px 10px 5px;
   background-color: white;
   border-radius: 5px;
 }
