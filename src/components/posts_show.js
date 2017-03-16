@@ -31,13 +31,16 @@ class PostsShow extends Component {
       return(
 
         <div>
-          <Link to="/">Back to Index</Link>
+          <Link to="/">
+            <button className="btn btn-primary">Back to index</button>
+
+          </Link>
           <button className="btn btn-danger pull-xs-right"
             onClick={this.onDeleteClick.bind(this)}>
             Delete Post
           </button>
           <h3 className="headers">{post.title}</h3>
-          <h6>{post.categories}</h6>
+          <h5>{post.categories}</h5>
           <div className="post-content">
             <p>{post.content}</p>
           </div>
